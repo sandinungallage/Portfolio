@@ -1532,8 +1532,8 @@ body.dark-theme .service-item {
 
 body.dark-theme .info-item,
 body.dark-theme .php-email-form {
-  background-color: #1e1e1e !important;
-  border-color: #333 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
   box-shadow: none !important;
 }
 

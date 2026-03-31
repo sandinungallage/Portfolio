@@ -34,10 +34,7 @@
 
 <body class="index-page">
 
-  <!-- Dark Mode Toggle -->
-  <button id="darkModeToggle" class="btn btn-dark position-fixed top-0 end-0 m-3" style="z-index: 9999; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); transition: all 0.3s ease;">
-    <i class="bi bi-moon-fill" style="transform: translateY(1px);"></i>
-  </button>
+
 
   <header id="header" class="header d-flex flex-column justify-content-center">
 
@@ -51,6 +48,7 @@
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="#" id="darkModeToggle"><i class="bi bi-moon-fill navicon"></i><span>Dark Mode</span></a></li>
       </ul>
     </nav>
 
@@ -84,7 +82,7 @@
               <a href="#contact" class="btn btn-primary rounded-pill px-4 py-2"
                 style="background-color: var(--accent-color); border-color: var(--accent-color); font-weight: 500;">Hire
                 Me</a>
-              <a href="assets/Sandinu%20CV.pdf" class="btn btn-outline-dark rounded-pill px-4 py-2"
+              <a href="assets/Sandinu%20CV.pdf" class="btn btn-outline-light rounded-pill px-4 py-2"
                 style="font-weight: 500;" download="Sandinu_CV.pdf">Download CV <i class="bi bi-download ms-1"></i></a>
             </div>
           </div>
@@ -1105,21 +1103,21 @@
       const darkModeToggle = document.getElementById('darkModeToggle');
       const icon = darkModeToggle.querySelector('i');
       const body = document.body;
-      
+
       const setDarkMode = (isDark) => {
         if (isDark) {
           body.classList.add('dark-theme');
           icon.classList.remove('bi-moon-fill');
           icon.classList.add('bi-sun-fill');
-          darkModeToggle.classList.remove('btn-dark');
-          darkModeToggle.classList.add('btn-light');
+          const span = darkModeToggle.querySelector('span');
+          if (span) span.innerText = 'Light Mode';
           localStorage.setItem('theme', 'dark');
         } else {
           body.classList.remove('dark-theme');
           icon.classList.remove('bi-sun-fill');
           icon.classList.add('bi-moon-fill');
-          darkModeToggle.classList.remove('btn-light');
-          darkModeToggle.classList.add('btn-dark');
+          const span = darkModeToggle.querySelector('span');
+          if (span) span.innerText = 'Dark Mode';
           localStorage.setItem('theme', 'light');
         }
       };
@@ -1129,7 +1127,8 @@
         setDarkMode(true);
       }
 
-      darkModeToggle.addEventListener('click', () => {
+      darkModeToggle.addEventListener('click', (e) => {
+        e.preventDefault();
         setDarkMode(!body.classList.contains('dark-theme'));
       });
     });

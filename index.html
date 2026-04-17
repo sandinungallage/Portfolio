@@ -16,9 +16,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,8 +56,10 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
+      <!-- Particles Background -->
+      <div id="particles-js" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></div>
 
-      <div class="container" data-aos="zoom-out">
+      <div class="container hero-content-container" data-aos="zoom-out" style="z-index: 3; position: relative;">
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h2>Sandinu Gallage</h2>
@@ -394,28 +394,31 @@
             <li data-filter=".filter-marketing">Digital Marketing</li>
           </ul><!-- End Portfolio Filters -->
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4 isotope-container" sdata-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/portfolio/my-dart-app.jpg" class="img-fluid" alt="Dart Mobile App">
+              <img src="assets/img/masonry-portfolio/govisahaya.png" class="img-fluid" alt="Govi Sahaya Mobile App">
               <div class="portfolio-info">
-                <h4>Dart Mobile App</h4>
-                <p>Built using Flutter & Dart with Firebase integration for real-time data handling.</p>
+                <h4>Govi Sahaya</h4>
+                <p>A smart agriculture platform with AI crop disease detection, profit planning, and multilingual
+                  capabilities to help farmers.</p>
                 <div class="mt-2 mb-3">
-                  <span class="badge rounded-pill bg-light text-dark border"><i class="bi bi-code-slash"></i>
-                    Flutter</span>
-                  <span class="badge rounded-pill bg-light text-dark border">Dart</span>
-                  <span class="badge rounded-pill bg-light text-dark border">Firebase</span>
+                  <span class="badge rounded-pill bg-light text-dark border" style="margin-bottom: 5px;"><i
+                      class="bi bi-code-slash"></i> Flutter</span>
+                  <span class="badge rounded-pill bg-light text-dark border" style="margin-bottom: 5px;">Node.js</span>
+                  <span class="badge rounded-pill bg-light text-dark border" style="margin-bottom: 5px;">MongoDB</span>
+                  <span class="badge rounded-pill bg-light text-dark border" style="margin-bottom: 5px;">Python /
+                    AI</span>
+                  <span class="badge rounded-pill bg-light text-dark border" style="margin-bottom: 5px;">UX/UI
+                    Design</span>
                 </div>
-                <a href="assets/img/portfolio/my-dart-app.jpg" title="Dart Mobile App"
+                <a href="assets/img/masonry-portfolio/govisahaya.png" title="Govi Sahaya - Smart Agriculture Platform"
                   data-gallery="portfolio-gallery-app" class="glightbox preview-link">
                   <i class="bi bi-zoom-in"></i>
                 </a>
-                <a href="#" target="_blank" title="GitHub Repo" class="details-link" style="right: 86px;">
+                <a href="https://github.com/sandinungallage/Govi-Sahaya-Mobile.git" target="_blank" title="GitHub Repo"
+                  class="details-link" style="right: 86px;">
                   <i class="bi bi-github"></i>
-                </a>
-                <a href="#" target="_blank" title="Live Demo" class="details-link">
-                  <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
             </div>
@@ -423,24 +426,27 @@
             <!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/portfolio/website1.jpg" class="img-fluid" alt="Website 1">
+              <img src="assets/img/masonry-portfolio/cherrypetalwebsite.jpg" class="img-fluid" alt="E commerce website">
               <div class="portfolio-info">
-                <h4>Portfolio Website</h4>
-                <p>A fully responsive, modern personal portfolio showcasing projects and professional experience.</p>
+                <h4>E commerce website</h4>
+                <p>A web-based e-commerce solution for a startup gift store, featuring a user-friendly shopping
+                  experience and WhatsApp-integrated checkout to enable simple, low-cost online ordering.</p>
                 <div class="mt-2 mb-3">
                   <span class="badge rounded-pill bg-light text-dark border"><i class="bi bi-code-slash"></i>
-                    HTML5</span>
-                  <span class="badge rounded-pill bg-light text-dark border">CSS3</span>
-                  <span class="badge rounded-pill bg-light text-dark border">Bootstrap 5</span>
+                    HTML</span>
+                  <span class="badge rounded-pill bg-light text-dark border">CSS</span>
+                  <span class="badge rounded-pill bg-light text-dark border">JavaScript</span>
                 </div>
-                <a href="assets/img/portfolio/website1.jpg" title="Portfolio Website"
+                <a href="assets/img/masonry-portfolio/cherrypetalwebsite.jpg" title="E commerce website"
                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link">
                   <i class="bi bi-zoom-in"></i>
                 </a>
-                <a href="#" target="_blank" title="GitHub Repo" class="details-link" style="right: 86px;">
+                <a href="https://github.com/sandinungallage/CherryPetalsStore" target="_blank" title="GitHub Repo"
+                  class="details-link" style="right: 86px;">
                   <i class="bi bi-github"></i>
                 </a>
-                <a href="#" target="_blank" title="Live Demo" class="details-link">
+                <a href="https://sandinungallage.github.io/CherryPetalsStore/index.html" target="_blank"
+                  title="Live Demo" class="details-link">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
@@ -1087,6 +1093,8 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Particles JS -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

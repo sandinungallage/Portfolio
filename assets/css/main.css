@@ -12,54 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --heading-font: "Outfit", sans-serif;
+  --nav-font: "Inter", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors */
 :root {
-  --background-color: #ffffff;
-  /* Background color for the entire website, including individual sections */
-  --default-color: #272829;
-  /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #45505b;
-  /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0563bb;
-  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: #f8fafc;
+  --default-color: #334155;
+  --heading-color: #0f172a;
+  --accent-color: #0dcaf0;
   --surface-color: #ffffff;
-  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
-  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors */
 :root {
-  --nav-color: #45505b;
-  /* The default color of the main navmenu links */
-  --nav-hover-color: #0563bb;
-  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #475569;
+  --nav-hover-color: #0dcaf0;
   --nav-mobile-background-color: #ffffff;
-  /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff;
-  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529;
-  /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0563bb;
-  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #1e293b;
+  --nav-dropdown-hover-color: #0dcaf0;
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
+/* Color Presets */
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: #f1f5f9;
 }
 
 .dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
+  --background-color: #0f172a;
+  --default-color: #f8fafc;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #1e293b;
   --contrast-color: #ffffff;
 }
 
@@ -175,14 +162,18 @@ h6 {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (min-width: 1200px) {
   .header~main {
-    margin-left: 160px;
+    margin-left: 300px;
+    margin-right: 100px;
   }
 
   .header~main .hero {
-    margin-left: -160px;
-    width: 100vw;
+    margin-left: -300px;
+    margin-right: -100px;
+    width: calc(100% + 400px);
+    padding-left: 300px;
+    padding-right: 100px;
   }
 }
 
@@ -1464,9 +1455,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 /*--------------------------------------------------------------
 # Dark Theme Overrides
@@ -1474,11 +1462,11 @@ section,
 body.dark-theme,
 body.dark-theme .light-background,
 body.dark-theme .section {
-  --background-color: #121212 !important;
-  --default-color: #e0e0e0 !important;
-  --heading-color: #ffffff !important;
-  --surface-color: #1e1e1e !important;
-  --contrast-color: #121212 !important;
+  --background-color: #0a0f1c !important;
+  --default-color: #cbd5e1 !important;
+  --heading-color: #f8fafc !important;
+  --surface-color: rgba(15, 23, 42, 0.7) !important;
+  --contrast-color: #0a0f1c !important;
 }
 
 body.dark-theme .navmenu a,
@@ -1525,9 +1513,18 @@ body.dark-theme .php-email-form textarea {
 
 body.dark-theme .portfolio-info,
 body.dark-theme .service-item {
-  background-color: #1e1e1e !important;
-  border-color: #333 !important;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(30, 41, 59, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+body.dark-theme .portfolio-info:hover,
+body.dark-theme .service-item:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 15px 35px rgba(13, 202, 240, 0.2) !important;
 }
 
 body.dark-theme .info-item,
@@ -1557,5 +1554,58 @@ body.dark-theme #footer .sitename {
 
 body.dark-theme #footer p,
 body.dark-theme #footer .copyright {
-  color: #e0e0e0 !important;
+  color: #cbd5e1 !important;
+}
+
+/*--------------------------------------------------------------
+# Premium Tech UI Overgrades
+--------------------------------------------------------------*/
+/* Cards Premium Hover */
+.service-item, .portfolio-info {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  background: var(--surface-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-item:hover, .portfolio-item:hover .portfolio-info {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(13, 202, 240, 0.15);
+}
+
+/* Progress Bar Overrides */
+.skills .progress-bar {
+  background: linear-gradient(90deg, #0dcaf0, #0072ff);
+  box-shadow: 0 0 10px rgba(13, 202, 240, 0.5);
+  border-radius: 5px;
+}
+.skills .progress-bar-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 5px;
+}
+
+/* Hero Section Gradient Typed Text */
+.hero .typed-cursor, .hero .typed {
+  background: linear-gradient(90deg, #0dcaf0, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.hero .typed-cursor {
+  -webkit-text-fill-color: #0dcaf0;
+}
+
+/* Button Micro-Animations */
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.6);
+}
+.btn-outline-light:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.4);
 }

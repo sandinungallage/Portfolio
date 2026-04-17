@@ -1603,8 +1603,13 @@ body.dark-theme #footer .copyright {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
 }
+.btn-outline-light {
+  color: var(--default-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
 .btn-outline-light:hover {
   transform: scale(1.05);
+  color: #fff;
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
